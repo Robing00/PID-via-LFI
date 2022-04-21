@@ -7,6 +7,8 @@ The script is brute-forcing GET-Requests, trying a defined range of numbers insi
 
 *Read more about Linux processes [here](https://man7.org/linux/man-pages/man5/proc.5.html)*
 
+### How to use it:
+<!-- Put in how-to-->
 
 ### Task list Robin
 - [x] Upload to Github ⬆️

@@ -18,14 +18,19 @@ import re
 ### CHANGE THIS ###
 url="http://vulnerable.website.com"
 ```
+2. Use the script with: **python3 PID-Scanner.py** 
 
 ## Where could it be usefull:
 <!-- Put in guide of. Many ways to use proc directory. (proc/sched_debug) also lists all the runnable tasks with their PID and you can just search everything there. -->
 <!--# EXAMPLE FORM HTB BACKDOOR (ebook vulnerability):
 # url="http://IP-ADDRESS/wp-content/plugins/ebook-download/filedownload.php?ebookdownloadurl=" -->
 
+## Advanced and additional stuff:
+<!-- if not working show how to change url to go out one dir more-->
+
 ## Task list Robin
 - [x] Upload to Github ⬆️
 - [ ] Finish commenting the script
 - [ ] Finish the [README](README.md)
+- [ ] change the print statement to make it look better
 - [ ] Finished :tada:

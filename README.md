@@ -8,7 +8,7 @@ The script is brute-forcing GET-Requests, trying a defined range of numbers insi
 *Read more about Linux processes [here](https://man7.org/linux/man-pages/man5/proc.5.html)*
 
 ## How to use it:
-1. Change the URL under *### CHANGE THIS ###* to your url.
+1. Change the URL under **_### CHANGE THIS ###_** to your url.
 ```python
 # Import requests to use GET and import re for RegEx
 import requests
@@ -31,7 +31,6 @@ Here is an example of how it could be used in a HackTheBox room:
 
 
 ## Advanced and additional stuff:
-<!-- if not working show how to change url to go out one dir more-->
 It's pretty simple to add new stuff or change it up a bit. If you have problem with the script working on another LFI you can change up the code a bit. There are a few reasons why the code maybe isn't working:
 1. In the following code add or take away ../
    - Because of how directories work, it could be possible, that the path to "/proc/PID/cmdline" is not always the same. It could be that it's stored a few directory levels above or below so change it up a bit and try it again. 
@@ -45,4 +44,5 @@ It's pretty simple to add new stuff or change it up a bit. If you have problem w
 - [ ] Finish commenting the script
 - [ ] Finish the [README](README.md)
 - [ ] change the print statement to make it look better
+- [ ] maybe make a 2nd version to filter out common processes like systemd or apache
 - [ ] Finished :tada:

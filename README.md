@@ -21,9 +21,15 @@ url="http://vulnerable.website.com"
 2. Use the script with: **python3 PID-Scanner.py** 
 
 ## Where could it be usefull:
-<!-- Put in guide of. Many ways to use proc directory. (proc/sched_debug) also lists all the runnable tasks with their PID and you can just search everything there. -->
-<!--# EXAMPLE FORM HTB BACKDOOR (ebook vulnerability):
-# url="http://IP-ADDRESS/wp-content/plugins/ebook-download/filedownload.php?ebookdownloadurl=" -->
+- There are many ways to find out running tasks/processes if yo have LFI. I find this to be a easy one to use. The annoying stuff is just to search for uncommon processes and it can take a long time. You could just use /proc/sched_debug to list all the runnable tasks and look up the processes there. 
+
+Here is an example of how it could be used in a HackTheBox room:
+- There is at least one Box in HTB where this script could be used. On this Box I found out, that there is a wordpress plugin which had a **_LFI vulnerability_**. The plugin was ebook-download and it could be used like this: 
+  - I only had to **_change the url_** for it to work. It's pretty simple :>
+  - Changed it like this (on line 6) :
+    - url="http://IP-ADDRESS/wp-content/plugins/ebook-download/filedownload.php?ebookdownloadurl=" 
+
+
 
 ## Advanced and additional stuff:
 <!-- if not working show how to change url to go out one dir more-->

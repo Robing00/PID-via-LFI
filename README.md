@@ -1,6 +1,6 @@
 # PID-Scanner-via-LFI
 ## Vulnerability
-This little script is usefull, if you have a LFI vuln. You can use this script to scan PIDs and maybe find a vulnerable process to exploit further.
+This little script is pretty simple and easy to recreate but it's usefull if you have a LFI vulnerability. You can use this script to scan PIDs and maybe find a vulnerable process to exploit further.
 
 ## How does it work:
 The script is brute-forcing GET-Requests, trying a defined range of numbers inside the proc directory and filter the result based on the length of the response.
@@ -8,7 +8,6 @@ The script is brute-forcing GET-Requests, trying a defined range of numbers insi
 *Read more about Linux processes [here](https://man7.org/linux/man-pages/man5/proc.5.html)*
 
 ## How to use it:
-<!-- Put in how-to with code snippet-->
 1. Change the URL under *### CHANGE THIS ###* to your url.
 ```python
 # Import requests to use GET and import re for RegEx
@@ -33,6 +32,13 @@ Here is an example of how it could be used in a HackTheBox room:
 
 ## Advanced and additional stuff:
 <!-- if not working show how to change url to go out one dir more-->
+It's pretty simple to add new stuff or change it up a bit. If you have problem with the script working on another LFI you can change up the code a bit. There are a few reasons why the code maybe isn't working:
+1. In the following code add or take away ../
+   - Because of how directories work, it could be possible, that the path to "/proc/PID/cmdline" is not always the same. It could be that it's stored a few directory levels above or below so change it up a bit and try it again. 
+    ```python
+    for i in range(1, 1000):
+    tar_url= url + "/../../../../../../proc/"+ str(i) +"/cmdline"
+    ```
 
 ## Task list Robin
 - [x] Upload to Github ⬆️

@@ -20,7 +20,7 @@ url="http://vulnerable.website.com"
 2. Use the script with: **python3 PID-Scanner.py** 
 
 ## Where could it be usefull:
-- There are many ways to find out running tasks/processes if yo have LFI. I find this to be a easy one to use. The annoying stuff is just to search for uncommon processes and it can take a long time. You could just use /proc/sched_debug to list all the runnable tasks and look up the processes there. 
+- There are many ways to find out running tasks/processes if yo have LFI. I find this to be a easy one to use. The annoying stuff is just to search for uncommon processes and it can take a long time. You could just use /proc/sched_debug to list all the runnable tasks and look up the processes there (by script or just in burp). 
 
 Here is an example of how it could be used in a HackTheBox room:
 - There is at least one Box in HTB where this script could be used. On this Box I found out, that there is a wordpress plugin which had a **_LFI vulnerability_**. The plugin was ebook-download and it could be used like this: 

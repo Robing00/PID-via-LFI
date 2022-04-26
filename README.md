@@ -26,7 +26,7 @@ Here is an example of how it could be used in a HackTheBox room:
 - There is at least one Box in HTB where this script could be used. On this Box I found out, that there is a wordpress plugin which had a **_LFI vulnerability_**. The plugin was ebook-download and it could be used like this: 
   - I only had to **_change the url_** for it to work. It's pretty simple :>
   - Changed it like this (on line 6) :
-    - url="http://IP-ADDRESS/wp-content/plugins/ebook-download/filedownload.php?ebookdownloadurl=" 
+    - url="http://IP-ADDRESS/wp-content/plugins/ebook-download/filedownload.php?ebookdownloadurl="
 
 
 

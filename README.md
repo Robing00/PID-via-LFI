@@ -1,6 +1,6 @@
 # PID-Scanner-via-LFI
 ## Vulnerability
-This little script is pretty simple and easy to recreate but it's usefull if you have a LFI vulnerability. You can use this script to scan PIDs and maybe find a vulnerable process to exploit further.
+This little script is pretty simple and easy to recreate but it's useful if you have a LFI vulnerability. You can use this script to scan PIDs and maybe find a vulnerable process to exploit further.
  
 ## How does it work:
 The script is brute-forcing GET-Requests, trying a defined range of numbers inside the proc directory and filter the result based on the length of the response.
@@ -19,8 +19,8 @@ url="http://vulnerable.website.com"
 ```
 2. Use the script with: **python3 PID-Scanner.py** 
 
-## Where could it be usefull:
-- There are many ways to find out running tasks/processes if yo have LFI. I find this to be an easy one to use. The annoying stuff is just to search for uncommon processes and it can take a long time. You could just use /proc/sched_debug to list all the runnable tasks and look up the processes there (by script or just in burp). 
+## Where could it be useful:
+- There are many ways to find out running tasks/processes if you have LFI. I find this to be an easy one to use. The annoying stuff is just to search for uncommon processes and it can take a long time. You could just use /proc/sched_debug to list all the runnable tasks and look up the processes there (by script or just in burp). 
 
 Here is an example of how it could be used in a HackTheBox room:
 - There is at least one Box in HTB where this script could be used. On this Box I found out, that there is a wordpress plugin which had a **_LFI vulnerability_**. The plugin was ebook-download and it could be used like this: 

@@ -1,9 +1,9 @@
 # PID-Scanner-via-LFI
 ## Vulnerability
-This little script is pretty simple and easy to recreate but it's useful if you have a LFI vulnerability. You can use this script to scan PIDs and maybe find a vulnerable process to exploit further.
- 
+This script, though simple and easy to replicate, is highly effective for exploiting Local File Inclusion (LFI) vulnerabilities. It allows for scanning Process IDs (PIDs) to identify potentially vulnerable processes for further exploitation.
+
 ## How does it work:
-The script is brute-forcing GET-Requests, trying a defined range of numbers inside the proc directory and filter the result based on the length of the response.
+The script employs a brute-force approach with GET requests, attempting a predefined range of numbers within the 'proc' directory. It then filters the results based on the response length.
 
 *Read more about Linux processes [here](https://man7.org/linux/man-pages/man5/proc.5.html)*
  
@@ -20,14 +20,14 @@ url="http://vulnerable.website.com"
 ```
 2. Use the script with: **python3 PID-Scanner.py** 
 
-## Where could it be useful:
-- There are many ways to find out running tasks/processes if you have LFI. I find this to be an easy one to use. The annoying stuff is just to search for uncommon processes and it can take a long time. You could just use /proc/sched_debug to list all the runnable tasks and look up the processes there (by script or just in burp). 
+## Practical Applications:
+- This script is an efficient tool for identifying active tasks/processes in the presence of an LFI vulnerability. The primary challenge is isolating uncommon processes, which can be time-consuming. An alternative is using /proc/sched_debug to list all runnable tasks, either via scripting or manual inspection in tools like Burp Suite.
 
-Here is an example of how it could be used in a HackTheBox room:
-- There is at least one Box in HTB where this script could be used. On this Box I found out, that there is a wordpress plugin which had a **_LFI vulnerability_**. The plugin was ebook-download and it could be used like this: 
-  - I only had to **_change the url_** for it to work. It's pretty simple :>
-  - Changed it like this (on line 6) :
-    - url="http://IP-ADDRESS/wp-content/plugins/ebook-download/filedownload.php?ebookdownloadurl=" 
+Example in a HackTheBox Challenge:
+
+In at least one HackTheBox (HTB) challenge, this script has proven useful. I discovered a WordPress plugin with an LFI vulnerability, namely 'ebook-download'. The only modification required was the URL:
+Update the URL on line 6 to:
+url = "http://IP-ADDRESS/wp-content/plugins/ebook-download/filedownload.php?ebookdownloadurl="
 
 
 
